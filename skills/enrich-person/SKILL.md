@@ -46,38 +46,19 @@ disambiguate the web results in Step 3.
 ## Step 3 — enrich from the web (in this order; stop when you have enough)
 Use the cheapest sufficient source first. Always record the source URL for each fact.
 
-### 3a. LinkedIn — via Apify (the primary professional source)
-LinkedIn is the spine of a professional dossier. Scrape it through Apify.
-- **Token:** read `APIFY_TOKEN` from the environment, else from the gitignored
-  your secrets store (a gitignored SETUP.md, or your shell env). If neither exists, tell the user: *"Add `APIFY_TOKEN=…` to
-  SETUP.md (and `export` it) — get it at console.apify.com → Settings → Integrations."* Then
-  skip LinkedIn and fall back to 3c for this run.
-- **Find the profile URL** if you only have a name: `mcp__jina-mcp-server__search_web` for
-  `"<name>" "<company>" site:linkedin.com/in` (or a plain web search), take the best `/in/` URL.
-  Confirm company/role against Step-2 signal before trusting it.
-- **Scrape it** — Apify run-sync (synchronous, returns dataset items):
-  ```bash
-  curl -s "https://api.apify.com/v2/acts/${LINKEDIN_ACTOR:-dev_fusion~linkedin-profile-scraper}/run-sync-get-dataset-items?token=$APIFY_TOKEN" \
-    -H 'Content-Type: application/json' \
-    -d '{"profileUrls":["<linkedin-url>"]}'
-  ```
-  Actor slugs change — `dev_fusion~linkedin-profile-scraper` and `apimaestro~linkedin-profile-detail`
-  are common public ones; if a run 404s, `curl "https://api.apify.com/v2/store?search=linkedin+profile&token=$APIFY_TOKEN"`
-  to find a live actor and set `LINKEDIN_ACTOR` (store the chosen slug in SETUP.md so it's stable).
-  Mind the input-schema field name (`profileUrls` vs `urls` vs `username`) — read the actor page if a run rejects input.
-- **Extract:** current role + company, headline, location, past roles (career arc),
-  education, and anything they volunteer (interests, mutuals). Keep the source URL per fact.
-
-### 3b. Instagram / creator surfaces (when relevant)
-For creators, brand-deal contacts, or anyone whose IG matters to us (this is a reels/content
-business), pull Instagram via Apify's **official, stable** actor:
+### 3a. LinkedIn + Instagram — via Apify (use the bundled script)
+The professional spine. Scrape through the bundled **`scripts/apify_enrich.sh`** — it wraps the
+Apify run-sync calls, retries input field-name variants, and finds a live actor if the default 404s:
 ```bash
-curl -s "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token=$APIFY_TOKEN" \
-  -H 'Content-Type: application/json' \
-  -d '{"usernames":["<handle>"],"resultsLimit":1}'
+APIFY_TOKEN=$APIFY_TOKEN scripts/apify_enrich.sh linkedin "https://www.linkedin.com/in/<slug>"
+APIFY_TOKEN=$APIFY_TOKEN scripts/apify_enrich.sh instagram <handle>   # creators / brand contacts only
 ```
-Extract follower count, bio, niche, post cadence, links. Useful for sizing a creator/brand.
-Skip for ordinary professional contacts — don't scrape someone's personal IG without a reason.
+- **Find the `/in/` URL first** if you only have a name: `mcp__jina-mcp-server__search_web` for
+  `"<name>" "<company>" site:linkedin.com/in`; confirm company/role against the Step-2 signal.
+- **Extract:** role/company, headline, location, career arc, education (LinkedIn); followers, bio,
+  niche, cadence (Instagram). Keep the source URL with each fact for citation.
+- **No `APIFY_TOKEN`?** Tell the user once, then skip to 3c (web) — don't block.
+- Actor slugs, input field-name quirks, and IG etiquette → **`references/apify.md`** (read only if scraping misbehaves).
 
 ### 3c. Open web (always cheap, always allowed)
 `mcp__jina-mcp-server__search_web` + `read_url` (or WebSearch/WebFetch) for: company website +
