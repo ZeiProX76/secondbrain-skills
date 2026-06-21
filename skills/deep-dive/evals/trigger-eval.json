@@ -1,0 +1,20 @@
+[
+  {"query": "do a deep dive on Tom Vorselen — everything across email, calendar, drive, notion and our transcripts, all the way back", "should_trigger": true},
+  {"query": "pull the full history of our relationship with Northwind Alumni and reconcile it into one clean profile", "should_trigger": true},
+  {"query": "backfill the dossier on NMQ Digital from every source we have, i think it's scattered and out of date", "should_trigger": true},
+  {"query": "i want the complete timeline with Stephanie Starnet — first contact to now, merge whatever's duplicated", "should_trigger": true},
+  {"query": "we've worked with Abby Huang on like 3 deals, consolidate everything we know about her into one profile", "should_trigger": true},
+  {"query": "reconstruct everything about the alumco client relationship from all our sources, there are gaps i need filled", "should_trigger": true},
+  {"query": "go deep on Jerry Skywork — gather all-time, flag any conflicts in the numbers, and ask me what you can't resolve", "should_trigger": true},
+  {"query": "seed a proper profile for topr from scratch using all the historical email, drive docs and meeting notes", "should_trigger": true},
+  {"query": "everything we have on Koen's contact Priya — across years, not just recent — build the full picture", "should_trigger": true},
+  {"query": "who is Tom Vorselen, quick context before i reply to his email", "should_trigger": false},
+  {"query": "find this new person Marcus on linkedin and make a dossier", "should_trigger": false},
+  {"query": "prep me for the Starnet call this afternoon", "should_trigger": false},
+  {"query": "process the granola transcript from today's NMQ call", "should_trigger": false},
+  {"query": "run my nightly sweep", "should_trigger": false},
+  {"query": "what do we know about the alumco pricing decision", "should_trigger": false},
+  {"query": "set up my sweep to also pull from slack", "should_trigger": false},
+  {"query": "what's connected — do i have a calendar integration?", "should_trigger": false},
+  {"query": "give me a one-line summary of who Abby Huang is", "should_trigger": false}
+]

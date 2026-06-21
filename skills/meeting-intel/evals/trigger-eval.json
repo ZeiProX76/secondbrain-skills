@@ -1,0 +1,20 @@
+[
+  {"query": "prep me for my 2pm with the Starnet folks — who's coming and what's our history with them", "should_trigger": true},
+  {"query": "i'm meeting Tom Vorselen thursday, brief me on him and what we should cover", "should_trigger": true},
+  {"query": "process this granola transcript from the NMQ call and pull decisions plus action items", "should_trigger": true},
+  {"query": "here's the zoom transcript from our deal call with Abby — distill it into the brain and update everyone's dossier", "should_trigger": true},
+  {"query": "who am i meeting with today, and what should i know going into each one", "should_trigger": true},
+  {"query": "summarize the call i just had, capture the action items with owners, and log who said what", "should_trigger": true},
+  {"query": "got a fireflies transcript in raw/inbox from the Northwind kickoff — turn it into a meeting note", "should_trigger": true},
+  {"query": "before my 4pm with Koen and the reels sponsor, pull together a prep brief", "should_trigger": true},
+  {"query": "take this transcript and update the people, the deal, and the action items in the vault", "should_trigger": true},
+  {"query": "who is Tom Vorselen?", "should_trigger": false},
+  {"query": "pull everything we've ever done with the Starnet account across all sources and reconcile it", "should_trigger": false},
+  {"query": "find Abby Huang's linkedin and build a dossier on her", "should_trigger": false},
+  {"query": "run tonight's sweep", "should_trigger": false},
+  {"query": "what did we decide in last week's NMQ meeting?", "should_trigger": false},
+  {"query": "what's on my calendar tomorrow?", "should_trigger": false},
+  {"query": "backfill the full NMQ relationship history from every source", "should_trigger": false},
+  {"query": "set up a webhook so granola transcripts flow in automatically", "should_trigger": false},
+  {"query": "is my gmail connected to the sweep?", "should_trigger": false}
+]

@@ -1,6 +1,6 @@
 ---
 name: meeting-intel
-description: Turn a meeting into durable, cited knowledge — before and after. Use before a meeting/call ("who am I meeting with", "prep me for X", a calendar event coming up) to research every attendee and produce a brief; and after, when a transcript arrives (Granola/Fireflies/Zoom, a file in raw/inbox or raw/sessions, or pasted text) to distill it into wiki/meetings, extract decisions + action items, and update every person's dossier. Enriches unknown attendees via the enrich-person routine (LinkedIn/Instagram/web). Built on the shared second brain schema.
+description: Own a SPECIFIC meeting or call — the moment right before it or right after it. Before one (prep me for my 2pm with X, who am I meeting with today, I'm meeting Tom Thursday brief me, an upcoming calendar event) research every attendee and hand back a skimmable brief of who they are, our history, open threads, and smart talking points. After one (a Granola/Fireflies/Zoom transcript, a file in raw/, or pasted notes — process this transcript, summarize the call I just had, capture the action items with owners, update the people and the deal from this call) produce a cited meeting note, pull decisions and action items, and fan the outcomes into each person, deal, and project. NOT for standalone who-is-X lookups (use enrich-person), querying what a past meeting already decided, full relationship backfills (use deep-dive), or the nightly sweep.
 ---
 
 # meeting-intel — every meeting becomes cited knowledge

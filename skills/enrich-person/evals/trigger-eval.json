@@ -1,0 +1,20 @@
+[
+  {"query": "do we know this guy Tom Vorselen? got an email from him about a brand collab and i want context before i reply", "should_trigger": true},
+  {"query": "who's Stephanie from Starnet — pulling a profile before our call would help, i've never dealt with her directly", "should_trigger": true},
+  {"query": "new name in my inbox, 'Abby Huang' at some agency called Dime, can you find her linkedin and figure out who she is", "should_trigger": true},
+  {"query": "the people/ page for jerry skywork is basically a stub, flesh it out from his linkedin and whatever's online", "should_trigger": true},
+  {"query": "look up this creator @lucamodena on instagram, thinking of them for a reels sponsor, how big are they actually", "should_trigger": true},
+  {"query": "someone called Marcus just joined topr as a dev — build him a dossier, i only have his name and the company", "should_trigger": true},
+  {"query": "find background on the founder of NMQ Digital before i email them, linkedin plus any press", "should_trigger": true},
+  {"query": "can you put together what we know and can find about Koen's contact 'Priya Nair', she's cc'd on the northwind thread", "should_trigger": true},
+  {"query": "research this person for me: sarah chen, ex-Google, now doing something in creator tooling i think", "should_trigger": true},
+  {"query": "pull EVERYTHING we've ever done with Tom Vorselen across email, calendar, drive and the transcripts — full backfill", "should_trigger": false},
+  {"query": "give me the complete history of the Northwind Alumni relationship, all sources, reconcile the whole timeline", "should_trigger": false},
+  {"query": "prep me for my 2pm — who are all the attendees on the calendar invite and what should i know", "should_trigger": false},
+  {"query": "process this granola transcript from the Starnet call and pull the action items", "should_trigger": false},
+  {"query": "run tonight's sweep across git, gmail and notion", "should_trigger": false},
+  {"query": "what did we decide about the alumco pricing model last month?", "should_trigger": false},
+  {"query": "who do we know that could intro us to someone at Spotify?", "should_trigger": false},
+  {"query": "is the Notion MCP connected on my machine? i can't tell", "should_trigger": false},
+  {"query": "summarize where the reels brand-deal pipeline stands right now", "should_trigger": false}
+]

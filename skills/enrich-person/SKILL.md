@@ -1,6 +1,6 @@
 ---
 name: enrich-person
-description: Find out everything we know (and can find) about a person, then write a cited dossier into the shared second brain. Use when the user asks "who is X / do we know X", before a meeting, when a new name shows up in a transcript/email/calendar, or whenever a person's wiki/people dossier is missing or thin. Looks the person up in the vault first, then enriches from LinkedIn (via Apify), Instagram, and the open web (Jina/web search) — every claim cited, inference labelled.
+description: Research, look up, profile, or vet ONE specific named person — turning just a name (plus maybe a company, @handle, email, or where they came up) into a cited dossier in the second brain. Use when the user asks who is X / do we know X, when a new or unfamiliar name shows up in an email, calendar invite, or transcript, or when a person's wiki/people page is missing or thin. Looks them up in the vault first, then enriches from LinkedIn (via Apify), Instagram, and the open web — every claim cited, inference labelled. This is the single-person research primitive, NOT a full multi-source backfill of someone's whole history (use deep-dive), NOT prep for a calendar meeting (use meeting-intel), and NOT the nightly sweep.
 ---
 
 # enrich-person — build a cited dossier on a person

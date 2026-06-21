@@ -1,6 +1,6 @@
 ---
 name: deep-dive
-description: Retroactive backfill — build a rich, cited profile of one entity (a person, company, deal, or project) by pulling ALL its history across every source, not just today. Use when the user says "do a deep dive on X", "pull everything we have on X", "backfill X", "what's the full history with X", or wants to seed/repair an entity's dossier from years of Gmail/Calendar/Drive/Notion/transcripts. Interactive — it gathers wide, reconciles duplicates, asks you the gap questions, then writes the profile. The deep counterpart to the nightly sweep (which only sees the last day).
+description: Backfill, reconstruct, or consolidate EVERYTHING known about ONE entity — a person, company, client, deal, or project — by pulling its full history across every source (Gmail, Calendar, Drive, Notion, transcripts, the vault), reconciling duplicates and conflicts, asking you the gap questions, and writing one rich cited profile. Use when the request targets one entity but spans many sources and many years and must end in a single reconciled profile — do a deep dive on X, pull everything we have on X, the full history with X, backfill or repair X's dossier. This is the heavy all-time backfill, NOT a quick who-is-X lookup (use enrich-person) and NOT the last-24h nightly sweep (use sweep-coordinator).
 ---
 
 # deep-dive — pull everything we have on one entity, then go deep
